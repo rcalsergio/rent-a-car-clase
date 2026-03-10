@@ -12,7 +12,6 @@ public class CarDialog {
 
     public CarDialog(){
         carController = new CarController();
-        addInitialCars();
     };
 
     public void getStarted(){

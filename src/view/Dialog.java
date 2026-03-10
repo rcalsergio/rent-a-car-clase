@@ -10,8 +10,17 @@ public class Dialog {
 
 
     private Scanner scanner;
-    public Dialog() {
+    private ClientDialog clientDialog;
+    private ModelDialog modelDialog;
+    private RentalOfficeDialog rentalOfficeDialog;
 
+    public Dialog() {
+    clientDialog = new ClientDialog();
+    modelDialog = new ModelDialog();
+    rentalOfficeDialog = new RentalOfficeDialog();
+    clientDialog.addInitialClients();
+    modelDialog.addInitialModels();
+    rentalOfficeDialog.addInitialRentalOffices();
     }
 
 
