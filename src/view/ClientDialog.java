@@ -18,9 +18,9 @@ public class ClientDialog {
     public void getStarted(){
         do {
             System.out.println("\n************************** Client Manager ********************************");
-            System.out.println("\n\t1. Create Client.\t\t\t\t4. Search Client.");
-            System.out.println("\n\t2. Remove Client.\t\t\t\t5. See All Clients.");
-            System.out.println("\n\t3. Update Client.\t\t\t\t0. Back.");
+            System.out.println("\n\t1. Create Office.\t\t\t\t4. Search Office.");
+            System.out.println("\n\t2. Remove Office.\t\t\t\t5. See All Offics.");
+            System.out.println("\n\t3. Update Office.\t\t\t\t0. Back.");
             System.out.println("\n**************************************************************************");
             scanner = new Scanner(System.in);
             int choice = scanner.nextInt();

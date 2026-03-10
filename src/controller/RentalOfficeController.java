@@ -28,10 +28,6 @@ public class RentalOfficeController {
         return service.findAll();
     }
 
-    public RentalOffice findByAddress(String address) {
-        return service.findByAddress(address);
-    }
-
     public void update(long id, String address, int freeForDelivery){
        RentalOffice rentalOffice = new RentalOffice(id,address,freeForDelivery);
         service.update(rentalOffice);
