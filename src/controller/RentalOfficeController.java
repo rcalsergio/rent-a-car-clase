@@ -23,9 +23,11 @@ public class RentalOfficeController {
         service.deleteById(id);
 
     }
+
     public RentalOffice findById(Long id){
         return service.findById(id);
     }
+
     public ArrayList findAll(){
         return service.findAll();
     }

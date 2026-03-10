@@ -29,7 +29,7 @@ public class Dialog {
                 if (choice == 1) {
                     clientManager();
                 } else if (choice == 2) {
-                    //TODO
+                    carManager();
                 } else if (choice == 3) {
                     rentalOfficeManager();
                 } else if (choice == 4) {
@@ -53,7 +53,6 @@ public class Dialog {
         } while (true);
     }
 
-
     public void clientManager(){
         ClientDialog clientDialog = new ClientDialog();
         clientDialog.getStarted();
@@ -68,5 +67,12 @@ public class Dialog {
         RentalOfficeDialog rentalOfficeDialog = new RentalOfficeDialog();
         rentalOfficeDialog.getStarted();
     }
+
+    public void carManager(){
+        CarDialog carDialog = new CarDialog();
+        carDialog.getStarted();
+    }
+
+
 
 }

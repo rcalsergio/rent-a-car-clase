@@ -1,19 +1,14 @@
 package view;
-
 import controller.ModelController;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
 public class ModelDialog {
-
     private ModelController modelController;
     private Scanner scanner;
-
     public ModelDialog(){
         modelController = new ModelController();
         addInitialModels();
-    };
+    }
 
     public void getStarted(){
         do {
@@ -34,12 +29,12 @@ public class ModelDialog {
                     modelController.add(name, pricePerDay);
                 } else if (choice == 2) {
                     System.out.println("Model ID: ");
-                    int id = scanner.nextInt();
+                    Long id = scanner.nextLong();
                     modelController.deleteById((long) id);
                 } else if (choice == 3) {
                     System.out.println(modelController.findAll());
                     System.out.println("Model ID: ");
-                    int id = scanner.nextInt();
+                    Long id = scanner.nextLong();
                     scanner.nextLine();
                     System.out.println("Name: ");
                     String name = scanner.nextLine();
@@ -49,7 +44,7 @@ public class ModelDialog {
                 } else if (choice == 4) {
                     scanner.nextLine();
                     System.out.println("Id: ");
-                    String dni = scanner.nextLine();
+                    Long id = scanner.nextLong();
                     System.out.println(modelController.findById(id));
                 } else if (choice == 5) {
                     for (Object model : modelController.findAll()) {

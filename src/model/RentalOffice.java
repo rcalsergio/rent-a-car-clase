@@ -25,11 +25,11 @@ public class RentalOffice {
     }
 
 
-    public String getName() {
+    public String getAddress() {
         return address;
     }
 
-    public void setName(String address) {
+    public void setAddress(String address) {
         this.address = address;
     }
 
