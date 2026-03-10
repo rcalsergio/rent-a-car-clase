@@ -54,6 +54,6 @@ public class Car {
 
     @Override
     public String toString() {
-        return id + " " + licensePlate ;
+        return id + " " + licensePlate + " " + model.getName();
     }
 }
