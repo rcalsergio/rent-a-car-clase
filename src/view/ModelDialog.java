@@ -1,7 +1,10 @@
 package view;
+
 import controller.ModelController;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
+
 public class ModelDialog {
     private ModelController modelController;
     private Scanner scanner;
