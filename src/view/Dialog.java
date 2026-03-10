@@ -13,14 +13,17 @@ public class Dialog {
     private ClientDialog clientDialog;
     private ModelDialog modelDialog;
     private RentalOfficeDialog rentalOfficeDialog;
+    private CarDialog carDialog;
 
     public Dialog() {
     clientDialog = new ClientDialog();
     modelDialog = new ModelDialog();
     rentalOfficeDialog = new RentalOfficeDialog();
+    carDialog = new CarDialog();
     clientDialog.addInitialClients();
     modelDialog.addInitialModels();
     rentalOfficeDialog.addInitialRentalOffices();
+    carDialog.addInitialCars();
     }
 
 
@@ -68,17 +71,14 @@ public class Dialog {
     }
 
     public void modelManager(){
-        ModelDialog modelDialog = new ModelDialog();
         modelDialog.getStarted();
     }
 
     public void rentalOfficeManager(){
-        RentalOfficeDialog rentalOfficeDialog = new RentalOfficeDialog();
         rentalOfficeDialog.getStarted();
     }
 
     public void carManager(){
-        CarDialog carDialog = new CarDialog();
         carDialog.getStarted();
     }
 
