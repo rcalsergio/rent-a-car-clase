@@ -12,8 +12,7 @@ public class RentalOfficeDialog {
 
     public RentalOfficeDialog(){
         rentalOfficeController = new RentalOfficeController();
-        addInitialRentalOffices();
-    };
+    }
 
     public void getStarted(){
         do {
