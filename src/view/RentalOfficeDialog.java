@@ -72,9 +72,9 @@ public class RentalOfficeDialog {
     }
 
     public void addInitialRentalOffices(){
-        rentalOfficeController.add("office1", 70);
-        rentalOfficeController.add("office2", 60);
-        rentalOfficeController.add("office3", 40);
+        rentalOfficeController.add("office1", 10);
+        rentalOfficeController.add("office2", 20);
+        rentalOfficeController.add("office3", 30);
 
     }
 }
