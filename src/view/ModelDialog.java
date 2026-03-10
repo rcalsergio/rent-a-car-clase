@@ -50,7 +50,7 @@ public class ModelDialog {
                     scanner.nextLine();
                     System.out.println("Id: ");
                     String dni = scanner.nextLine();
-                    //System.out.println(modelController.findByName(dni));
+                    System.out.println(modelController.findById(id));
                 } else if (choice == 5) {
                     for (Object model : modelController.findAll()) {
                         System.out.println(model);

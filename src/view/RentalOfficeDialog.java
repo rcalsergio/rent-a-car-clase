@@ -49,8 +49,8 @@ public class RentalOfficeDialog {
                 } else if (choice == 4) {
                     scanner.nextLine();
                     System.out.println("Id: ");
-                    String id = scanner.nextLine();
-                    //System.out.println(rentalOfficeController.findByAddress(dni));
+                    Long id = scanner.nextLong();
+                    System.out.println(rentalOfficeController.findById(id));
                 } else if (choice == 5) {
                     for (Object rentalOffice : rentalOfficeController.findAll()) {
                         System.out.println(rentalOffice);

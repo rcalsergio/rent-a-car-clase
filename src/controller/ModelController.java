@@ -1,6 +1,7 @@
 package controller;
 
 
+import model.Model;
 import service.ModelServiceImpl;
 import service.IModelService;
 
@@ -22,7 +23,9 @@ public class ModelController {
         service.deleteById(id);
 
     }
-
+    public Model findById(Long id){
+        return service.findById(id);
+    }
     public ArrayList findAll(){
         return service.findAll();
     }
