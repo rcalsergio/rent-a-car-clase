@@ -8,10 +8,22 @@ import java.util.Scanner;
 
 public class Dialog {
 
+    private ClientDialog clientDialog;
+    private ModelDialog modelDialog;
+    private RentalOfficeDialog rentalOfficeDialog;
+    private ClientDialog carDialog;
 
     private Scanner scanner;
     public Dialog() {
 
+        clientDialog = new ClientDialog();
+        modelDialog = new ModelDialog();
+        rentalOfficeDialog = new RentalOfficeDialog();
+        carDialog = new ClientDialog();
+
+        clientDialog.addInitialClients();
+        modelDialog.addInitialModels();
+        rentalOfficeDialog.addInitialRentalOffices();
     }
 
 
@@ -54,22 +66,18 @@ public class Dialog {
     }
 
     public void clientManager(){
-        ClientDialog clientDialog = new ClientDialog();
         clientDialog.getStarted();
     }
 
     public void modelManager(){
-        ModelDialog modelDialog = new ModelDialog();
         modelDialog.getStarted();
     }
 
     public void rentalOfficeManager(){
-        RentalOfficeDialog rentalOfficeDialog = new RentalOfficeDialog();
         rentalOfficeDialog.getStarted();
     }
 
     public void carManager(){
-        CarDialog carDialog = new CarDialog();
         carDialog.getStarted();
     }
 

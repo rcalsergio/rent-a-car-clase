@@ -11,8 +11,7 @@ public class CarDialog {
     private Scanner scanner;
 
     public CarDialog(){
-        carController = new CarController();
-        addInitialCar();
+        carController = new CarController();;
     }
 
     public void getStarted(){
@@ -79,7 +78,7 @@ public class CarDialog {
 
 
     public void addInitialCar(){
-        carController.add("Cambados", 234,213);
+        carController.add("Cambados", 3L,1L);
 
     }
 }

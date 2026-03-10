@@ -12,7 +12,6 @@ public class ClientDialog {
 
     public ClientDialog(){
         clientController = new ClientController();
-        addInitialClients();
     };
 
     public void getStarted(){

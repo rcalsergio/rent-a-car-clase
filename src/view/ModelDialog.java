@@ -12,7 +12,6 @@ public class ModelDialog {
 
     public ModelDialog(){
         modelController = new ModelController();
-        addInitialModels();
     };
 
     public void getStarted(){

@@ -13,7 +13,7 @@ public class CarController {
         service = new CarServiceImpl();
     }
 
-    public void add (String licensePlate, long idModel, long idRentalOffice){
+    public void add (String licensePlate, Long idModel, Long idRentalOffice){
         service.add(licensePlate,idModel,idRentalOffice);
     }
     public void deleteById(Long id){
