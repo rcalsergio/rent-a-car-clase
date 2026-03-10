@@ -37,5 +37,4 @@ public class RentalOfficeServiceImpl implements IRentalOfficeService{
         repository.update(rentalOffice);
     }
 
-
 }

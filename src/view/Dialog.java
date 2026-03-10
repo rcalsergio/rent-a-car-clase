@@ -10,8 +10,17 @@ public class Dialog {
 
 
     private Scanner scanner;
-    public Dialog() {
+    private ClientDialog clientDialog;
+    private ModelDialog modelDialog;
+    private RentalOfficeDialog rentalOfficeDialog;
 
+    public Dialog() {
+    clientDialog = new ClientDialog();
+    modelDialog = new ModelDialog();
+    rentalOfficeDialog = new RentalOfficeDialog();
+    clientDialog.addInitialClients();
+    modelDialog.addInitialModels();
+    rentalOfficeDialog.addInitialRentalOffices();
     }
 
 
@@ -29,7 +38,7 @@ public class Dialog {
                 if (choice == 1) {
                     clientManager();
                 } else if (choice == 2) {
-                    //TODO
+                    carManager();
                 } else if (choice == 3) {
                     rentalOfficeManager();
                 } else if (choice == 4) {
@@ -66,6 +75,11 @@ public class Dialog {
     public void rentalOfficeManager(){
         RentalOfficeDialog rentalOfficeDialog = new RentalOfficeDialog();
         rentalOfficeDialog.getStarted();
+    }
+
+    public void carManager(){
+        CarDialog carDialog = new CarDialog();
+        carDialog.getStarted();
     }
 
 

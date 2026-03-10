@@ -12,15 +12,14 @@ public class RentalOfficeDialog {
 
     public RentalOfficeDialog(){
         rentalOfficeController = new RentalOfficeController();
-        addInitialRentalOffices();
     };
 
     public void getStarted(){
         do {
-            System.out.println("\n************************** RentalOffice Manager ********************************");
-            System.out.println("\n\t1. Create RentalOffice.\t\t\t\t4. Search RentalOffice.");
-            System.out.println("\n\t2. Remove RentalOffice.\t\t\t\t5. See All RentalOffices.");
-            System.out.println("\n\t3. Update RentalOffice.\t\t\t\t0. Back.");
+            System.out.println("\n************************** Office Manager ********************************");
+            System.out.println("\n\t1. Create Office.\t\t\t\t4. Search Office.");
+            System.out.println("\n\t2. Remove Office.\t\t\t\t5. See All Offices.");
+            System.out.println("\n\t3. Update Office.\t\t\t\t0. Back.");
             System.out.println("\n**************************************************************************");
             scanner = new Scanner(System.in);
             int choice = scanner.nextInt();
@@ -33,12 +32,12 @@ public class RentalOfficeDialog {
                     int feeForDelivery = scanner.nextInt();
                     rentalOfficeController.add(address, feeForDelivery);
                 } else if (choice == 2) {
-                    System.out.println("RentalOffice ID: ");
+                    System.out.println("Office ID: ");
                     int id = scanner.nextInt();
                     rentalOfficeController.deleteById((long) id);
                 } else if (choice == 3) {
                     System.out.println(rentalOfficeController.findAll());
-                    System.out.println("RentalOffice ID: ");
+                    System.out.println("Office ID: ");
                     int id = scanner.nextInt();
                     scanner.nextLine();
                     System.out.println("Address: ");
@@ -72,9 +71,9 @@ public class RentalOfficeDialog {
     }
 
     public void addInitialRentalOffices(){
-        rentalOfficeController.add("Cambados", 60);
-        rentalOfficeController.add("Vigo", 100);
-        rentalOfficeController.add("Teis", 130);
+        rentalOfficeController.add("office1", 10);
+        rentalOfficeController.add("office2", 20);
+        rentalOfficeController.add("office3", 30);
 
     }
 }

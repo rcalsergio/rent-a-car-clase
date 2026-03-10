@@ -12,8 +12,7 @@ public class ModelDialog {
 
     public ModelDialog(){
         modelController = new ModelController();
-        addInitialModels();
-    };
+    }
 
     public void getStarted(){
         do {
@@ -34,12 +33,12 @@ public class ModelDialog {
                     modelController.add(name, pricePerDay);
                 } else if (choice == 2) {
                     System.out.println("Model ID: ");
-                    int id = scanner.nextInt();
+                    Long id = scanner.nextLong();
                     modelController.deleteById((long) id);
                 } else if (choice == 3) {
                     System.out.println(modelController.findAll());
                     System.out.println("Model ID: ");
-                    int id = scanner.nextInt();
+                    Long id = scanner.nextLong();
                     scanner.nextLine();
                     System.out.println("Name: ");
                     String name = scanner.nextLine();
