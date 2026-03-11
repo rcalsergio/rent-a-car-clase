@@ -15,16 +15,20 @@ public class Dialog {
     private ModelDialog modelDialog;
     private RentalOfficeDialog rentalOfficeDialog;
     private CarDialog carDialog;
+    private RentalDialog rentalDialog;
 
     public Dialog() {
         clientDialog = new ClientDialog();
         modelDialog = new ModelDialog();
         rentalOfficeDialog = new RentalOfficeDialog();
         carDialog = new CarDialog();
+        rentalDialog = new RentalDialog();
         clientDialog.addInitialClients();
         modelDialog.addInitialModels();
         rentalOfficeDialog.addInitialRentalOffices();
         carDialog.addInitialCars();
+        rentalDialog.addInitialRentals();
+
 
     }
 
@@ -33,7 +37,7 @@ public class Dialog {
         do {
             System.out.println("\n********************** Welcome to Rent A Car *****************************");
             System.out.println("\n\t1. Manage Clients.\t\t\t\t\t4. Manage Models.");
-            System.out.println("\n\t2. Manage Cars.\t\t\t\t\t\t5. Manage Rents.");
+            System.out.println("\n\t2. Manage Cars.\t\t\t\t\t\t5. Manage Rentals.");
             System.out.println("\n\t3. Manage Offices.\t\t\t\t\t0. Exit.");
             System.out.println("\n**************************************************************************");
             scanner = new Scanner(System.in);
@@ -43,13 +47,13 @@ public class Dialog {
                 if (choice == 1) {
                     clientManager();
                 } else if (choice == 2) {
-                    CarManager();
+                    carManager();
                 } else if (choice == 3) {
                     rentalOfficeManager();
                 } else if (choice == 4) {
                     modelManager();
                 } else if (choice == 5) {
-                    //TODO
+                    rentalManager();
                 }else if(choice==0) {
                     System.out.println("Bye!!");
                     System.exit(0);;
@@ -76,14 +80,15 @@ public class Dialog {
     }
 
     public void rentalOfficeManager(){
-
         rentalOfficeDialog.getStarted();
     }
 
-    public void CarManager(){
+    public void carManager(){
         carDialog.getStarted();
     }
 
-
+    public void rentalManager(){
+        rentalDialog.getStarted();
+    }
 
 }

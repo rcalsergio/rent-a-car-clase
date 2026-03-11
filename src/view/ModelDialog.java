@@ -49,7 +49,7 @@ public class ModelDialog {
                     scanner.nextLine();
                     System.out.println("Id: ");
                     Long id = scanner.nextLong();
-                    System.out.println(modelController.findById(id));
+                    System.out.println(modelController.findById(id).getCars());
                 } else if (choice == 5) {
                     for (Object model : modelController.findAll()) {
                         System.out.println(model);

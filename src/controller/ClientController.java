@@ -36,4 +36,7 @@ public class ClientController {
     }
 
 
+    public Client findById(Long clientId) {
+        return service.findById(clientId);
+    }
 }
