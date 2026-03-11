@@ -17,7 +17,7 @@ public class RentalOfficeDialog {
     public void getStarted(){
         do {
             System.out.println("\n************************** RentalOffice Manager ********************************");
-            System.out.println("\n\t1. Create RentalOffice.\t\t\t\t4. Search RentalOffice.");
+            System.out.println("\n\t1. Create RentalOffice.\t\t\t\t4. Cars in RentalOffice.");
             System.out.println("\n\t2. Remove RentalOffice.\t\t\t\t5. See All RentalOffices.");
             System.out.println("\n\t3. Update RentalOffice.\t\t\t\t0. Back.");
             System.out.println("\n**************************************************************************");
@@ -49,7 +49,7 @@ public class RentalOfficeDialog {
                     scanner.nextLine();
                     System.out.println("Id: ");
                     Long id = scanner.nextLong();
-                    System.out.println(rentalOfficeController.findById(id));
+                    System.out.println(rentalOfficeController.findById(id).getCars());
                 } else if (choice == 5) {
                     for (Object rentalOffice : rentalOfficeController.findAll()) {
                         System.out.println(rentalOffice);
