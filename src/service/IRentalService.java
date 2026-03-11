@@ -9,9 +9,14 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 public interface IRentalService {
+    void update(Long id, LocalDate startDate, LocalDate endDate, Car car, Client client, RentalOffice rentalOffice);
+
     Rental findById(Long id);
+
     void add(Long id, LocalDate startDate, LocalDate endDate, Car car, Client client, RentalOffice rentalOffice);
+
     void deleteById(Long id);
+
     ArrayList findAll();
-    void update(Long id,LocalDate startDate, LocalDate endDate, Car car, Client client, RentalOffice rentalOffice);
 }
+

@@ -31,7 +31,8 @@ public class RentalServiceImpl implements IRentalService{
 
     @Override
     public void update(Long id, LocalDate startDate, LocalDate endDate, Car car, Client client, RentalOffice rentalOffice) {
-
+        Rental rental = new Rental(id, startDate, endDate, car, client, rentalOffice);
+        repository.update(rental);
     }
 
     public Rental findById(Long id) {

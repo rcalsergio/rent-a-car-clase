@@ -21,6 +21,10 @@ public class RentalController {
 
     }
 
+    public Rental findById(Long id){
+        return service.findById(id);
+    }
+
     public void deleteById(Long id){
         service.deleteById(id);
 
@@ -30,12 +34,9 @@ public class RentalController {
         return service.findAll();
     }
 
-    public Rental findById(Long id){
-        return service.findById(id);
-    }
 
     public void update(Long id, LocalDate startDate, LocalDate endDate, Car car, Client client, RentalOffice rentalOffice){
-        service.update(id, startDate, endDate, car, client, rentalOffice);
+        service.update(id,startDate, endDate, car, client, rentalOffice);
     }
 
 

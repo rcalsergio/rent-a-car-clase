@@ -76,6 +76,7 @@ public class RentalDialog {
                     int id = scanner.nextInt();
                     rentalController.deleteById((long) id);
                 } else if (choice == 3) {
+                    System.out.println(rentalController.findAll());
                     System.out.println("id: ");
                     Long id= scanner.nextLong();
                     System.out.println("startDateYear: ");

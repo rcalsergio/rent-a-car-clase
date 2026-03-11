@@ -1,6 +1,5 @@
 package controller;
 
-
 import model.Car;
 import service.CarServiceImpl;
 import service.ICarService;
@@ -9,7 +8,6 @@ import service.ICarService;
 import java.util.ArrayList;
 
 public class CarController {
-
     private ICarService service;
     public CarController() {
         service = new CarServiceImpl();
@@ -23,7 +21,6 @@ public class CarController {
     public Car findById(Long id){
         return service.findById(id);
     }
-
 
     public void deleteById(Long id){
         service.deleteById(id);
