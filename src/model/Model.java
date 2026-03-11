@@ -1,19 +1,24 @@
 package model;
 
+import java.util.ArrayList;
+
 public class Model {
     private Long id;
     private String name;
     private int pricePerDay;
+    private ArrayList<Car> cars;
 
     public Model(Long id, String name, int pricePerDay) {
         this.id = id;
         this.name = name;
         this.pricePerDay = pricePerDay;
+        this.cars = new ArrayList<>();
     }
 
     public Model(String name, int pricePerDay) {
         this.name = name;
         this.pricePerDay = pricePerDay;
+        this.cars = new ArrayList<>();
     }
 
     public Long getId() {
@@ -39,6 +44,14 @@ public class Model {
 
     public void setpricePerDay(int pricePerDay) {
         this.pricePerDay = pricePerDay;
+    }
+
+    public ArrayList<Car> getCars(){
+        return this.cars;
+    }
+
+    public void addCar(Car car){
+        this.cars.add(car);
     }
 
     @Override

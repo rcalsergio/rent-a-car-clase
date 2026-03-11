@@ -36,6 +36,4 @@ public class ModelServiceImpl implements IModelService{
         Model model = new Model(id, name, pricePerDay);
         repository.update(model);
     }
-
-
 }
