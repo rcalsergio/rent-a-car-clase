@@ -3,6 +3,7 @@ package view;
 import controller.*;
 import model.Car;
 import model.Client;
+import model.Rental;
 import model.RentalOffice;
 
 import java.time.LocalDate;
@@ -56,7 +57,7 @@ public class RentalDialog {
                     Long idRentalOffice = scanner.nextLong();
                     scanner.nextLine();
                     System.out.println(rentalOfficeController.findById(idRentalOffice));
-                    System.out.println(carController.findAll());
+                    System.out.println(carController.findAllCarsAvailable());
                     System.out.println("Enter an IdCar: ");
                     Long idCar = scanner.nextLong();
                     System.out.println("Client " + clientController.findById(idClient) +
@@ -66,10 +67,14 @@ public class RentalDialog {
                             " at rental office " + rentalOfficeController.findById(idRentalOffice));
                     rentalController.add(idClient,fecha, fecha2, idRentalOffice, idCar );
                 } else if (choice == 2) {
-                    System.out.println(rentalController.findAll());
-                    System.out.println("Enter a Rental ID: ");
+                    System.out.println(carController.findAll());
+                    System.out.println("Enter an Id: ");
                     Long id = scanner.nextLong();
-                    rentalController.deleteById(id);
+                    Rental rental = rentalController.findById(id);
+                    rental.getCar().setAvailable(true);
+                    System.out.println("Car " + carController.findAllCarsAvailable() + " returned successfully.");
+
+
                 } else if (choice == 3) {
                     System.out.println(rentalController.findAll());
                     System.out.println("Enter Rental ID to modify: ");

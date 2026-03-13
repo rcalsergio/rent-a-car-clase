@@ -10,4 +10,5 @@ public interface ICarRepository {
     ArrayList findAll();
     Car findById(Long id);
     void update(Car car);
+    ArrayList<Car> findAllCarsAvailable();
 }

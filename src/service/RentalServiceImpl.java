@@ -24,6 +24,7 @@ public class RentalServiceImpl implements IRentalService{
         clientService = new ClientServiceImpl();
 
 
+
     }
 
     public void add(Long idClient, LocalDate startDate, LocalDate endDate, Long idRentalOffice, Long idCar) {
@@ -31,10 +32,13 @@ public class RentalServiceImpl implements IRentalService{
         repository.add(rental);
         Car car= carService.findById(idCar);
         car.addRental(rental);
+        car.setAvailable(false);
         Client client= clientService.findById(idClient);
         client.addRental(rental);
         RentalOffice rentalOffice= rentalOfficeService.findById(idRentalOffice);
         rentalOffice.addRental(rental);
+
+
 
     }
 

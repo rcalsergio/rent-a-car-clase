@@ -12,5 +12,6 @@ public interface ICarService {
     void deleteById(Long id);
     ArrayList findAll();
     void update(Long id, String licensePlate, Long idModel, Long idRentalOffice);
+    ArrayList<Car> findAllCarsAvailable();
 
 }

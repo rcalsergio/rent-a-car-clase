@@ -33,9 +33,14 @@ public class CarRepository implements ICarRepository {
         return cars;
     }
 
-    public ArrayList findAllCarsAvailable(){
-        //TODO
-        return null;
+    public ArrayList findAllCarsAvailable() {
+        ArrayList<Car> availableCars = new ArrayList<>();
+        for (Car car : cars) {
+            if (car.isAvailable()) {
+                availableCars.add(car);
+            }
+        }
+        return availableCars;
     }
 
     public void deleteById(Long id){

@@ -39,5 +39,9 @@ public class CarController {
         service.update(id, licensePlate, idModel, idRentalOffice);
     }
 
+    public ArrayList<Car> findAllCarsAvailable() {
+        return service.findAllCarsAvailable();
+    }
+
 
 }

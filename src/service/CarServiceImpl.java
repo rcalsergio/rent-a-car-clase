@@ -48,4 +48,7 @@ public class CarServiceImpl implements ICarService{
         repository.update(new Car(id, licensePlate, modelService.findById(idModel), rentalOfficeService.findById(idRentalOffice)));
     }
 
+    public ArrayList<Car> findAllCarsAvailable() {
+        return repository.findAllCarsAvailable();
+    }
 }
